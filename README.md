@@ -14,7 +14,7 @@
 
 ---
 
-#[3DIC](https://kartheesan-design.github.io/3dic/)
+# [3DIC](https://kartheesan-design.github.io/3dic/)
 
 
 
