@@ -14,7 +14,8 @@
 
 ---
 
-https://kartheesan-design.github.io/3dic/
+[3DIC](https://kartheesan-design.github.io/3dic/)
+
 
 
 ## 📌 Project Summary
@@ -184,6 +185,9 @@ RTL Netlist (picorv32)
 | TSV delay | 0.03 | ns |
 
 > TSV: 10 µm diameter × 150 µm deep, Cu, sky130A BEOL
+<img width="1935" height="1326" alt="si_parasitics" src="https://github.com/user-attachments/assets/f7928fba-408e-4781-8282-a2e117093f78" />
+
+
 
 ### Thermal Analysis (HotSpot Block Model)
 
@@ -194,6 +198,11 @@ RTL Netlist (picorv32)
 | sram_array | 45.57°C | +0.57°C |
 | sram_peri | 45.16°C | +0.16°C |
 | **Junction headroom** | **149.2°C** | to Tjunc=150°C |
+
+
+
+<img width="2234" height="888" alt="power_breakdown" src="https://github.com/user-attachments/assets/4afff080-3fd9-436d-af69-d2a2cb3ae77b" />
+
 
 ### Timing — 2D Wire vs 3D TSV
 
@@ -206,6 +215,9 @@ RTL Netlist (picorv32)
 | ctrl | 0.28 ns | 0.03 ns | 89% |
 | wstrb[3:0] | 0.31 ns | 0.03 ns | 90% |
 | **Average** | | | **88.8%** |
+
+
+<img width="2084" height="887" alt="timing_paths" src="https://github.com/user-attachments/assets/dd05eef4-ee6c-4b43-a9bd-7af3ccd4ebeb" />
 
 ### Interconnect Reduction
 
