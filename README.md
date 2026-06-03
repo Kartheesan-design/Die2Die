@@ -1,4 +1,6 @@
-# ⚡ OpenSky3D — A Full Open-Source 3DIC Design Flow
+# Die2Die: End-to-End 3DIC Implementation of a RISC-V Processor + SRAM Stack using OpenROAD & sky130A
+
+
 ### *picorv32 RISC-V CPU + SRAM Stack on sky130A PDK*
 
 > A complete, reproducible 3D Integrated Circuit (3DIC) design flow using only open-source EDA tools — from RTL netlist to TSV-bonded two-die stack with SI, thermal, and timing sign-off.
@@ -8,13 +10,13 @@
 ![Design Verdict](https://img.shields.io/badge/Design%20Verdict-SIGN--OFF%20READY-brightgreen?style=for-the-badge)
 ![PDK](https://img.shields.io/badge/PDK-sky130A-blue?style=for-the-badge)
 ![Tool](https://img.shields.io/badge/EDA-OpenROAD-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey?style=for-the-badge)
+
 
 ---
 
 ## 📌 Project Summary
 
-**OpenSky3D** demonstrates a full 3DIC physical design flow integrating a **picorv32 RV32IMC CPU** (Die-1) with a **1KB sky130 SRAM macro** (Die-2) using Face-to-Face (F2F) TSV hybrid bonding. The entire flow — from floorplan to thermal sign-off — runs on open-source tools with the sky130A PDK.
+This Project demonstrates a full 3DIC physical design flow integrating a **picorv32 RV32IMC CPU** (Die-1) with a **1KB sky130 SRAM macro** (Die-2) using Face-to-Face (F2F) TSV hybrid bonding. The entire flow — from floorplan to thermal sign-off — runs on open-source tools with the sky130A PDK.
 
 | Property | Value |
 |----------|-------|
@@ -94,14 +96,14 @@ OpenSky3D/
 │       ├── picorv32_thermal.png        # CPU die heat map
 │       └── sram_thermal.png            # SRAM die heat map
 │
-├── reports/
+├── analysis/
 │   ├── full_analysis_report.txt        # Complete sign-off report
 │   ├── tsv_alignment_report.csv        # 79-TSV alignment data
 │   ├── power_breakdown.png             # Power & interconnect chart
 │   ├── si_parasitics.png               # TSV SI frequency plots
 │   └── timing_paths.png                # 2D vs 3D timing comparison
 │
-├── visualisation/
+├── 3DIC_view/
 │   └── 3dic_stack.html                 # Interactive 3D stack (Plotly)
 │
 └── README.md
@@ -116,15 +118,15 @@ RTL Netlist (picorv32)
         │
         ▼
 ┌───────────────────┐     ┌───────────────────┐
-│   Die-1: picorv32 │     │   Die-2: SRAM      │
+│   Die-1: picorv32 │     │   Die-2: SRAM     │
 │                   │     │                   │
-│  1. Floorplan     │     │  sky130_sram_      │
-│     600×600 µm    │     │  1kbyte_1rw1r_     │
-│  2. Place pins    │     │  32x256_8          │
+│  1. Floorplan     │     │  sky130_sram_     │
+│     600×600 µm    │     │  1kbyte_1rw1r_    │
+│  2. Place pins    │     │  32x256_8         │
 │     met2/met3     │     │                   │
-│  3. Placement     │     │  Pre-verified:     │
-│     65% density   │     │  123/123 nets      │
-│  4. PDN (met1)    │     │  routed ✅         │
+│  3. Placement     │     │  Pre-verified:    │
+│     65% density   │     │  123/123 nets     │
+│  4. PDN (met1)    │     │  routed ✅        │
 │  5. Routing ✅    │     │                   │
 │  6. TSV pads      │     │  TSV pads         │
 │     met5 strip    │     │  met5 mirrored    │
@@ -149,7 +151,7 @@ RTL Netlist (picorv32)
   │  SI (Open3D │      │  Thermal     │
   │  Flow cal.py│      │  (HotSpot)   │
   │             │      │              │
-  │  LTSV=5.4pH │      │  ΔT<1°C ✅  │
+  │  LTSV=5.4pH │      │  ΔT<1°C ✅   │
   │  RTSV=3.7mΩ │      │  149°C hdrmn │
   │  PASS ✅    │      │  PASS ✅     │
   └─────────────┘      └──────────────┘
@@ -374,13 +376,6 @@ python3 visualisation/generate_3d_stack.py
 3DIC Design Flow — picorv32 + SRAM on sky130A
 Tools: OpenROAD · Open3DFlow · HotSpot · Python
 
----
-
-## 📄 License
-
-This project is released under the [Apache 2.0 License](LICENSE).
-The sky130A PDK is © SkyWater Technology, licensed under Apache 2.0.
-picorv32 is © Claire Wolf, licensed under ISC.
 
 ---
 
