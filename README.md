@@ -14,6 +14,9 @@
 
 ---
 
+https://kartheesan-design.github.io/3dic/
+
+
 ## 📌 Project Summary
 
 This Project demonstrates a full 3DIC physical design flow integrating a **picorv32 RV32IMC CPU** (Die-1) with a **1KB sky130 SRAM macro** (Die-2) using Face-to-Face (F2F) TSV hybrid bonding. The entire flow — from floorplan to thermal sign-off — runs on open-source tools with the sky130A PDK.
