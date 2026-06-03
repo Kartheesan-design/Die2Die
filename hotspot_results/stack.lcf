@@ -1,0 +1,14 @@
+# Layer Config File for HotSpot 3D
+# Syntax: <layer_name> <is_active?> <floorplan_file> <thickness_m> <conductivity_W/mK> <specific_heat_J/kgK> <density_kg/m3>
+
+# Layer 1: picorv32 CPU silicon die
+die1_si   1   /home/kartheesan/Desktop/3DIC/hotspot_results/stack.flp   150e-6   148.0   700.0   2330.0
+
+# Layer 2: Thermal Interface Material (underfill, epoxy-based)
+tim1      0   /home/kartheesan/Desktop/3DIC/hotspot_results/stack.flp    50e-6     1.5   1000.0   1200.0
+
+# Layer 3: SRAM silicon die
+die2_si   1   /home/kartheesan/Desktop/3DIC/hotspot_results/stack.flp   150e-6   148.0   700.0   2330.0
+
+# Layer 4: TIM / heat-spreader interface
+tim2      0   /home/kartheesan/Desktop/3DIC/hotspot_results/stack.flp    50e-6     5.0   900.0   8900.0

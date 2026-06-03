@@ -1,0 +1,4 @@
+cpu_core	5e-4	5e-4	5e-5	5e-5
+cpu_peri	6e-4	1e-4	0	0
+sram_array	4e-4	4e-4	1e-4	1e-4
+sram_peri	6e-4	2e-4	0	0

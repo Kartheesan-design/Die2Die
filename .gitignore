@@ -1,0 +1,25 @@
+# Large binary files
+*.gds
+*.gds2
+*.oas
+*.spice
+*.cdl
+
+# OpenROAD temp files
+*.log
+*.json
+objects/
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# HotSpot temp
+*.init
+*.ttrace
+
+# OS files
+.DS_Store
+Thumbs.db

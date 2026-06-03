@@ -1,0 +1,2 @@
+cpu_core cpu_peri sram_array sram_peri
+0.045 0.005 0.025 0.005
